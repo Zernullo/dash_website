@@ -1,0 +1,55 @@
+# ==================== #
+# SECRETS & ENV FILES (MUST IGNORE!)
+# ==================== #
+.env
+.env.local
+.env.development
+.env.production
+*.local
+
+# ==================== #
+# DEPENDENCIES
+# ==================== #
+node_modules/
+*/node_modules/
+
+# ==================== #
+# BUILD OUTPUTS
+# ==================== #
+dist/
+dist-ssr/
+build/
+.cache/
+.turbo/
+
+# ==================== #
+# LOGS
+# ==================== #
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==================== #
+# TESTING
+# ==================== #
+.coverage/
+/junit/
+/cypress/videos/
+/cypress/screenshots/
+
+# ==================== #
+# EDITORS/IDEs
+# ==================== #
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
