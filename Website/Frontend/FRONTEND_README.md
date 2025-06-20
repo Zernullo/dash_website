@@ -65,3 +65,23 @@ All your working files live here!
 2. Reuse components instead of making new ones
 3. Keep images organized in `assets/images/`
 4. Global styles go in `assets/styles/`
+
+
+`I set up a basic hello world currently`
+# How to run the program (Use Command Prompt)
+`Terminal 1:`
+cd backend
+npm run dev
+ctrl click link
+
+`Terminal 2:`
+cd frontend
+npm run dev
+ctrl Click link
+
+Backend Server: localhost:5000 
+Should print `Hello World from backend!`
+
+Frontend Server: localhost:5173
+Should print  `Hello from frontend!`
+              `Backend says: Hello World from backend!`
