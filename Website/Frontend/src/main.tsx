@@ -6,6 +6,7 @@
  * (You almost never touch this file)
  */
 
+import './assets/styles/globals.css' // Import global styles (like Tailwind CSS)
 import React from 'react'; // Import React to use JSX
 import ReactDOM from 'react-dom/client'; // Import ReactDOM to render components
 import App from './App'; // Import the main App component
