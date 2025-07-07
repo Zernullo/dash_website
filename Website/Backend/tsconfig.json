@@ -118,6 +118,6 @@
       "module": "commonjs"
     }
   },
-  "include": ["**/*.ts", "src/server.js", "src/routes/Routes.js", "src/controllers/Controller.js", "src/config/db.js", "src/models/Model.js"],
+  "include": ["**/*.ts", "src/server.ts", "src/routes/Routes.ts", "src/controllers/Controller.ts", "src/config/index.ts", "src/models/Model.ts"],
   "exclude": ["node_modules","dist"]
 }

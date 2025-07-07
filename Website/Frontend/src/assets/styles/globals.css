@@ -9,8 +9,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Optional custom CSS */
-body {
-  @apply bg-gray-50;
-}
