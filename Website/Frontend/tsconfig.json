@@ -1,4 +1,13 @@
 {
+  "compilerOptions": {
+    "baseUrl": ".", // Crucial for path aliases
+    "paths": { // Crucial for path aliases
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/hooks/*": ["./src/hooks/*"]
+    }
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
