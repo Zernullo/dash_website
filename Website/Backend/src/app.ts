@@ -9,16 +9,24 @@
 
 import express from 'express';
 import cors from 'cors';
+import Routes from './routes/Routes';  // Make sure this import is here
+import dotenv from 'dotenv';
+
+dotenv.config({ path: 'database.env' }); // load env variables if needed here
 
 const app = express(); // Create the server
-app.use(cors()); // frontend-backend connection
 
-// Common mistake: Forgetting to use json middleware
-app.use(express.json()); // Allows us to read JSON data from requests
+app.use(cors()); // Allow frontend-backend communication
 
-// This is where we define the main route
+app.use(express.json()); // Middleware to parse JSON requests
+
+// Routes
+app.use("/api/data", Routes);
+
+// Main root route
 app.get('/', (req, res) => {
-  res.send('Hello World from backend!');
+  const PORT = process.env.PORT || 5000;
+  res.send(`Connected to backend! PORT: ${PORT}`);
 });
 
-export default app; // Export the app so we can use it in server.ts
+export default app; // Export app to be used in server.ts

@@ -6,16 +6,17 @@
  * 3. Makes everything start working together
  */
 
-import app from './app'; // Import the main app file
-import dotenv from 'dotenv'; // Import dotenv to read environment variables
+import { connectDB } from './config/index';
+import dotenv from 'dotenv'
+import app from './app'; // Import the main app file, which sets up the server
 
-// Load environment variables from .env file
-dotenv.config(); // Critical: Loads .env variables
 
-// Start the server
+dotenv.config({ path: 'database.env' }); // Load environment variables from database.env
+
 const PORT = process.env.PORT || 5000;
 
-// This is where we connect to the database
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+connectDB().then(() =>{ //once the database connects, then listen
+  app.listen(PORT, () => {
+    console.log("Server listening on PORT:", PORT);
+  });
 });

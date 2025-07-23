@@ -28,7 +28,7 @@ function App() {
       {/* Backend message with Tailwind */}
       <div className="bg-white p-6 rounded-lg shadow-md">
         <p className="text-lg">
-          <span className="font-semibold">Backend says:</span> 
+          <span className="font-semibold">Backend says: </span> 
           <span className="text-gray-700 ml-2">{message}</span>
         </p>
       </div>
