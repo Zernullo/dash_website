@@ -8,11 +8,11 @@
 */
 
 @import "tw-animate-css";
+@import "tailwindcss/preflight";
 
+@tailwind utilities; /* Adjusted for Tailwind CSS v4 */
 @custom-variant dark (&:is(.dark *));
 
-@import "tailwindcss/preflight";
-@tailwind utilities; /* Adjusted for Tailwind CSS v4 */
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -88,7 +88,7 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(19.125% 0.00002 271.152 / 0.771);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
