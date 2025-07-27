@@ -12,6 +12,7 @@ interface ICar {
     name: string;
     mph: number;
     gasLevel: number;
+    engineTemp: number;
     zeroToSixty: number;
     lapTime: number;
     createdAt?: Date;
@@ -43,8 +44,8 @@ export const getCarById = async (req: Request, res: Response): Promise<void> => 
 
 export const createCar = async (req: Request<{}, {}, ICar>, res: Response): Promise<void> => {
     try {
-        const { name, mph, gasLevel, zeroToSixty, lapTime } = req.body;
-        const car = new Car({ name, mph, gasLevel, zeroToSixty, lapTime });
+        const { name, mph, gasLevel, engineTemp, zeroToSixty, lapTime } = req.body;
+        const car = new Car({ name, mph, gasLevel, engineTemp, zeroToSixty, lapTime });
 
         const savedCar = await car.save();
         res.status(201).json(savedCar);
@@ -56,10 +57,10 @@ export const createCar = async (req: Request<{}, {}, ICar>, res: Response): Prom
 
 export const updateCar = async (req: Request<{ id: string }, {}, ICar>, res: Response): Promise<void> => {
     try {
-        const { name, mph, gasLevel, zeroToSixty, lapTime } = req.body;
+        const { name, mph, gasLevel, engineTemp, zeroToSixty, lapTime } = req.body;
         const updatedCar = await Car.findByIdAndUpdate(
             req.params.id,
-            { name, mph, gasLevel, zeroToSixty, lapTime },
+            { name, mph, gasLevel, engineTemp, zeroToSixty, lapTime },
             { new: true }
         );
         

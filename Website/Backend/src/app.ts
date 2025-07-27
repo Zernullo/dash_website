@@ -16,7 +16,10 @@ dotenv.config({ path: 'database.env' }); // load env variables if needed here
 
 const app = express(); // Create the server
 
-app.use(cors()); // Allow frontend-backend communication
+app.use(cors({
+  origin: ['http://localhost:5173', 'ws://your-esp32-ip'],
+  credentials: true
+}));// Allow requests from specific origins
 
 app.use(express.json()); // Middleware to parse JSON requests
 

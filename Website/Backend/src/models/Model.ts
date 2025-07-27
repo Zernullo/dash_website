@@ -21,6 +21,10 @@ const carschema = new mongoose.Schema({
         type: Number,
         required:true
     },
+    "engineTemp":{
+        type: Number,
+        required:true
+    },
     "zeroToSixty":{
         type: Number
     },
